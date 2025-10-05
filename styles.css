@@ -912,9 +912,18 @@ body {
     font-weight: bold;
 }
 
+.status-content {
+    flex: 1;
+    text-align: center;
+}
+
 .status-content h2 {
     margin: 0 0 0.5rem 0;
     font-size: 1.5rem;
+}
+
+.status-content > p {
+    text-align: center;
 }
 
 .status-content p {
@@ -1003,14 +1012,16 @@ body {
 .location-directions-btn .btn-emoji {
     font-size: 1.1rem;
     line-height: 1;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
 }
 
 .location-directions-btn .btn-text {
-    line-height: 1;
-    display: flex;
+    line-height: 1.2;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
 }
 
 .location-directions-btn:hover {
