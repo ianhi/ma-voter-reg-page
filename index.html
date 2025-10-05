@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Voter Registration Status: Search - Mobile Friendly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MOCKUP BANNER -->
+    <div class="mockup-banner">
+        <div class="mockup-banner-content">
+            <strong>⚠️ UNOFFICIAL MOCKUP</strong> • <a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">💻 View source on GitHub</a>
+            <p>This is a mobile-friendly redesign demonstration. For official voter registration information, visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
+        </div>
+    </div>
+
+    <!-- Simplified mobile-friendly header -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="header-logo">
+                <div class="seal"></div>
+                <div class="header-text">
+                    <div class="header-title">Secretary of the Commonwealth of Massachusetts</div>
+                    <div class="header-name">William Francis Galvin</div>
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="http://www.sec.state.ma.us">Home</a></li>
+                <li><a href="#">Popular Features</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section header -->
+    <div class="section-header">
+        <h2><a href="https://www.sec.state.ma.us/divisions/elections/elections-and-voting.htm">Elections</a></h2>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Language selector -->
+        <div class="language-selector">
+            <button class="lang-btn active">English</button>
+            <span>|</span>
+            <button class="lang-btn">Español</button>
+            <span>|</span>
+            <button class="lang-btn">中文</button>
+            <span>|</span>
+            <button class="lang-btn">ខ្មែរខ្មែ</button>
+            <span>|</span>
+            <button class="lang-btn">Tiếng Việt</button>
+        </div>
+
+        <!-- Voter registration form -->
+        <div class="form-container">
+            <h1>Find my voter registration status</h1>
+
+            <div class="instructions">
+                <h2>To find your voter registration information:</h2>
+                <ul>
+                    <li>Enter your name, date of birth, and the zip code at which you are qualified to vote.</li>
+                    <li>Required fields are marked with an asterisk (*).</li>
+                </ul>
+            </div>
+
+            <form id="voter-search-form">
+                <!-- Note: 'required' attributes removed for mockup demo purposes
+                     In a production version, these fields would be required for validation -->
+
+                <!-- Name fields -->
+                <fieldset class="form-section">
+                    <legend>* Required: Enter your name</legend>
+
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                </fieldset>
+
+                <!-- Date of birth -->
+                <fieldset class="form-section">
+                    <legend>Enter Your Date of Birth</legend>
+
+                    <div class="form-group">
+                        <label for="birth-date">Date of Birth</label>
+                        <input type="date" id="birth-date" name="birth-date">
+                        <p class="field-help">Use your device's date picker for easy selection</p>
+                    </div>
+                </fieldset>
+
+                <!-- Zip code -->
+                <fieldset class="form-section">
+                    <legend>Enter the 5-digit Zip code of your residential address</legend>
+
+                    <div class="form-group">
+                        <label for="zip-code">Zip code</label>
+                        <input type="text" id="zip-code" name="zip-code" pattern="[0-9]{5}" maxlength="5" inputmode="numeric">
+                    </div>
+                </fieldset>
+
+                <!-- Agreement checkbox -->
+                <div class="agreement-section">
+                    <p class="agreement-text">This webpage is intended for use by the individual voter to determine his or her voter registration status</p>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreement" name="agreement">
+                        <label for="agreement">I understand this statement and agree. I understand I must check this box before I can view my voter registration information and apply for a mail-in ballot.</label>
+                    </div>
+                </div>
+
+                <!-- Form buttons -->
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Clear fields</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+
+            <!-- Demo Results Links (Mockup Only) -->
+            <div class="demo-links-section">
+                <h3>📋 Mockup Demo Links</h3>
+                <p>Since this is a demonstration mockup (not connected to the real database), use these links to see different result states:</p>
+                <div class="demo-links">
+                    <a href="results-active.html" class="demo-link demo-link-success">
+                        <span class="demo-link-icon">✓</span>
+                        <span class="demo-link-text">
+                            <strong>Active Registration</strong>
+                            <small>See what an active voter sees</small>
+                        </span>
+                    </a>
+                    <a href="results-inactive.html" class="demo-link demo-link-warning">
+                        <span class="demo-link-icon">⚠️</span>
+                        <span class="demo-link-text">
+                            <strong>Inactive Registration</strong>
+                            <small>See what an inactive voter sees</small>
+                        </span>
+                    </a>
+                    <a href="results-not-found.html" class="demo-link demo-link-error">
+                        <span class="demo-link-icon">✕</span>
+                        <span class="demo-link-text">
+                            <strong>Not Registered</strong>
+                            <small>See what an unregistered person sees</small>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>William Francis Galvin</h3>
+                <p>Secretary of the Commonwealth of Massachusetts</p>
+                <address>
+                    <a href="https://www.google.com/maps/place/Secretary+of+State/@42.3590302,-71.0618052,18.08z/data=!3m1!5s0x89e3709b31b58b45:0xb9ca4a5ec000fbec!4m5!3m4!1s0x89e37087e947b017:0x400700461f383298!8m2!3d42.3595949!4d-71.0621929" target="_blank">
+                        One Ashburton Place<br>
+                        Boston, MA 02108
+                    </a>
+                </address>
+                <p>
+                    <a href="tel:1-800-392-6090">1-800-392-6090</a><br>
+                    <a href="mailto:cis@sec.state.ma.us">cis@sec.state.ma.us</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/secretaryofmass/" target="_blank" aria-label="Instagram">
+                        <span class="social-icon">📷</span> Instagram
+                    </a>
+                    <a href="https://www.youtube.com/mrvoterreg" target="_blank" aria-label="YouTube">
+                        <span class="social-icon">▶️</span> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.sec.state.ma.us/divisions/terms.htm">Terms and Conditions</a>
+            <a href="https://www.sec.state.ma.us/divisions/accessibility-statement.htm">Accessibility Statement</a>
+        </div>
+
+        <!-- Mockup disclaimer in footer -->
+        <div class="mockup-footer-notice">
+            <p><strong>This is an unofficial mobile-friendly mockup</strong> created for demonstration purposes. For official voter registration information, please visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
+            <p><a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">View source code and contribute on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

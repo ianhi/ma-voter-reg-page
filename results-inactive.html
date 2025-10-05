@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Registration Status - Mobile Friendly Mockup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MOCKUP BANNER -->
+    <div class="mockup-banner">
+        <div class="mockup-banner-content">
+            <strong>⚠️ UNOFFICIAL MOCKUP</strong> • <a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">💻 View source on GitHub</a>
+            <p>This is a mobile-friendly redesign demonstration. For official voter registration information, visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
+        </div>
+    </div>
+
+    <!-- Simplified mobile-friendly header -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="header-logo">
+                <div class="seal"></div>
+                <div class="header-text">
+                    <div class="header-title">Secretary of the Commonwealth of Massachusetts</div>
+                    <div class="header-name">William Francis Galvin</div>
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="http://www.sec.state.ma.us">Home</a></li>
+                <li><a href="#">Popular Features</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section header -->
+    <div class="section-header">
+        <h2><a href="https://www.sec.state.ma.us/divisions/elections/elections-and-voting.htm">Elections</a></h2>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="results-container">
+            <!-- Status Banner -->
+            <div class="status-banner status-banner-warning">
+                <div class="status-icon">⚠️</div>
+                <div class="status-content">
+                    <h2>Inactive Voter Registration</h2>
+                    <p>Your voter registration is currently <strong>INACTIVE</strong>. You may need to update your registration to vote.</p>
+                    <div class="polling-location-banner">
+                        <strong>📍 Your polling location (if activated):</strong>
+                        <span class="location-name">GRAHAM & PARKS SCHOOL</span>
+                        <span class="location-address">44 Linnaean St., Playground Entrance, Cambridge MA</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Graham+and+Parks+School+44+Linnaean+St+Cambridge+MA" target="_blank" class="location-directions-btn">
+                            <span class="btn-emoji">🗺️</span>
+                            <span class="btn-text">Get directions</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Actions -->
+            <div class="alert-box alert-box-compact">
+                <p>If this information is no longer accurate, <a href="/OVR/" target="_blank">update your voter registration</a></p>
+            </div>
+
+            <h1>Voter registration status</h1>
+
+            <!-- Update notice - Collapsible on mobile -->
+            <details class="info-details">
+                <summary>ℹ️ About this information</summary>
+                <div class="info-details-content">
+                    <p><strong>Note:</strong> All links open in a new window or tab</p>
+                    <p>Voter registration information is updated daily based on data received from city and town election departments. <strong>Last update: Saturday, October 4, 2025 4:31 AM</strong></p>
+                    <p>If you have recently made changes to your voter registration, including address and/or party enrollment, please check with your local election official regarding eligibility to vote in the next election.</p>
+                </div>
+            </details>
+
+            <!-- Voter Details Section -->
+            <section class="info-section">
+                <h2>Voter registration details for:</h2>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Name:</span>
+                        <span class="value">IAN ARTHUR HUNT-ISAAK</span>
+                    </div>
+
+                    <div class="info-item status-item">
+                        <span class="label">Voting Status:</span>
+                        <span class="value">
+                            <span class="status-badge status-inactive">INACTIVE</span>
+                            <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/inactive-voters.htm" target="_blank" class="inline-link">Why inactive?</a>
+                        </span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Date of Birth:</span>
+                        <span class="value">4/8/1995</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Party:</span>
+                        <span class="value">DEMOCRAT</span>
+                    </div>
+
+                    <div class="info-item full-width">
+                        <span class="label">Legal Voting Address:</span>
+                        <span class="value">8 SHEPARD ST 5<br>CAMBRIDGE, MA 02138</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Polling Location Section -->
+            <section class="info-section">
+                <h2>Vote at the following location:</h2>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Ward Number:</span>
+                        <span class="value">08</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="label">Precinct Number:</span>
+                        <span class="value">01</span>
+                    </div>
+
+                    <div class="info-item full-width">
+                        <span class="label">Facility Name:</span>
+                        <span class="value">GRAHAM & PARKS SCHOOL</span>
+                    </div>
+
+                    <div class="info-item full-width">
+                        <span class="label">Address:</span>
+                        <span class="value">44 LINNAEAN ST., PLAYGROUND ENTRANCE</span>
+                    </div>
+                </div>
+
+                <p class="help-text">Your voting location is provided by the local elections official in the city or town where you reside. If you have any questions, contact your city or town clerk directly.</p>
+            </section>
+
+            <!-- City/Town Clerk Section -->
+            <section class="info-section">
+                <h2>Your city or town clerk is:</h2>
+
+                <div class="contact-card">
+                    <h3>ELECTION COMMISSION</h3>
+                    <address>
+                        689 MASSACHUSETTS AV<br>
+                        STE 1<br>
+                        CAMBRIDGE, MA 02139
+                    </address>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="label">Phone:</span>
+                            <a href="tel:617-349-4361">617-349-4361</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Email:</span>
+                            <a href="mailto:elections2@cambridgema.gov?subject=My Voter Registration Status">elections2@cambridgema.gov</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Fax:</span>
+                            <span>617-349-4366</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Website:</span>
+                            <a href="http://www.cambridgema.gov/election" target="_blank">www.cambridgema.gov/election</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Elected Officials Section -->
+            <section class="info-section">
+                <h2>Your elected officials are:</h2>
+
+                <!-- Statewide Officials -->
+                <div class="officials-group">
+                    <h3>Statewide office holders for the Commonwealth:</h3>
+
+                    <div class="official-list">
+                        <div class="official-item">
+                            <span class="office">Governor:</span>
+                            <a href="http://www.mass.gov/governor/" target="_blank">MAURA HEALEY</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">Lieutenant Governor:</span>
+                            <a href="https://www.mass.gov/person/kim-driscoll-lieutenant-governor" target="_blank">KIMBERLEY DRISCOLL</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">Secretary:</span>
+                            <a href="http://www.sec.state.ma.us" target="_blank">WILLIAM FRANCIS GALVIN</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">Auditor:</span>
+                            <a href="http://www.mass.gov/auditor/" target="_blank">DIANA DIZOGLIO</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">Treasurer:</span>
+                            <a href="https://www.mass.gov/orgs/office-of-state-treasurer-and-receiver-general-deborah-b-goldberg" target="_blank">DEBORAH B. GOLDBERG</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">Attorney General:</span>
+                            <a href="https://www.mass.gov/orgs/office-of-the-attorney-general" target="_blank">ANDREA CAMPBELL</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">U.S. Senator:</span>
+                            <a href="https://www.warren.senate.gov/" target="_blank">ELIZABETH A. WARREN</a>
+                        </div>
+                        <div class="official-item">
+                            <span class="office">U.S. Senator:</span>
+                            <a href="https://www.markey.senate.gov/" target="_blank">EDWARD J. MARKEY</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Representatives -->
+                <div class="officials-group">
+                    <h3>Current District Representatives:</h3>
+
+                    <div class="district-list">
+                        <div class="district-item">
+                            <div class="district-header">
+                                <span class="office">Congressional:</span>
+                                <a href="https://katherineclark.house.gov/" target="_blank" class="official-name">KATHERINE M. CLARK</a>
+                            </div>
+                            <div class="district-info">
+                                <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/district/2022-congressional.htm" target="_blank">FIFTH DISTRICT</a>
+                                <a href="https://www.sec.state.ma.us/divisions/bookstore/maps/district-maps.htm#congressional" target="_blank" class="map-link">View map</a>
+                            </div>
+                        </div>
+
+                        <div class="district-item">
+                            <div class="district-header">
+                                <span class="office">State Senate:</span>
+                                <a href="https://malegislature.gov/Legislators/Profile/PDJ0" target="_blank" class="official-name">PATRICIA D. JEHLEN</a>
+                            </div>
+                            <div class="district-info">
+                                <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/district/2022-senatorial.htm" target="_blank">SECOND MIDDLESEX DISTRICT</a>
+                                <a href="https://www.sec.state.ma.us/divisions/bookstore/maps/district-maps.htm#senate" target="_blank" class="map-link">View map</a>
+                            </div>
+                        </div>
+
+                        <div class="district-item">
+                            <div class="district-header">
+                                <span class="office">State Representative:</span>
+                                <a href="http://www.malegislature.gov/People/Profile/MCD1" target="_blank" class="official-name">MARJORIE C. DECKER</a>
+                            </div>
+                            <div class="district-info">
+                                <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/district/2022-representative.htm" target="_blank">TWENTY-FIFTH MIDDLESEX DISTRICT</a>
+                                <a href="https://www.sec.state.ma.us/divisions/bookstore/maps/district-maps.htm#rep" target="_blank" class="map-link">View map</a>
+                            </div>
+                        </div>
+
+                        <div class="district-item">
+                            <div class="district-header">
+                                <span class="office">Governor's Council:</span>
+                                <a href="https://www.mass.gov/service-details/councillors" target="_blank" class="official-name">TERRENCE W. KENNEDY</a>
+                            </div>
+                            <div class="district-info">
+                                <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/district/2022-councillor.htm" target="_blank">SIXTH DISTRICT</a>
+                            </div>
+                        </div>
+
+                        <div class="district-item">
+                            <div class="district-header">
+                                <span class="office">District Attorney:</span>
+                                <a href="http://www.middlesexda.com" target="_blank" class="official-name">MARIAN T. RYAN</a>
+                            </div>
+                            <div class="district-info">
+                                <a href="https://www.sec.state.ma.us/divisions/elections/voting-information/district/2022-district-attorney.htm" target="_blank">NORTHERN DISTRICT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Button -->
+            <div class="form-actions">
+                <a href="index.html" class="btn btn-primary">Back to search</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>William Francis Galvin</h3>
+                <p>Secretary of the Commonwealth of Massachusetts</p>
+                <address>
+                    <a href="https://www.google.com/maps/place/Secretary+of+State/@42.3590302,-71.0618052,18.08z/data=!3m1!5s0x89e3709b31b58b45:0xb9ca4a5ec000fbec!4m5!3m4!1s0x89e37087e947b017:0x400700461f383298!8m2!3d42.3595949!4d-71.0621929" target="_blank">
+                        One Ashburton Place<br>
+                        Boston, MA 02108
+                    </a>
+                </address>
+                <p>
+                    <a href="tel:1-800-392-6090">1-800-392-6090</a><br>
+                    <a href="mailto:cis@sec.state.ma.us">cis@sec.state.ma.us</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/secretaryofmass/" target="_blank" aria-label="Instagram">
+                        <span class="social-icon">📷</span> Instagram
+                    </a>
+                    <a href="https://www.youtube.com/mrvoterreg" target="_blank" aria-label="YouTube">
+                        <span class="social-icon">▶️</span> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.sec.state.ma.us/divisions/terms.htm">Terms and Conditions</a>
+            <a href="https://www.sec.state.ma.us/divisions/accessibility-statement.htm">Accessibility Statement</a>
+        </div>
+
+        <!-- Mockup disclaimer in footer -->
+        <div class="mockup-footer-notice">
+            <p><strong>This is an unofficial mobile-friendly mockup</strong> created for demonstration purposes. For official voter registration information, please visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
+            <p><a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">View source code and contribute on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
