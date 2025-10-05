@@ -6,6 +6,34 @@
 
 This project is a responsive, mobile-friendly redesign of the Massachusetts Secretary of State's voter registration search page. The official page, while functional, is not optimized for mobile devices. This mockup demonstrates how the same functionality could be presented with a modern, mobile-first design.
 
+### Visual Comparison
+
+**Search Page:**
+
+<table>
+<tr>
+<td width="50%"><b>Original Site</b></td>
+<td width="50%"><b>Our Mockup</b></td>
+</tr>
+<tr>
+<td><img src="images/real-input.png" alt="Original Massachusetts voter registration search page" width="300"></td>
+<td><img src="images/mock-input.png" alt="Mobile-friendly mockup search page" width="300"></td>
+</tr>
+</table>
+
+**Results Page:**
+
+<table>
+<tr>
+<td width="50%"><b>Original Site</b></td>
+<td width="50%"><b>Our Mockup</b></td>
+</tr>
+<tr>
+<td><img src="images/real-result.png" alt="Original Massachusetts voter registration results page" width="300"></td>
+<td><img src="images/mock-result.png" alt="Mobile-friendly mockup results page" width="300"></td>
+</tr>
+</table>
+
 ### Key Improvements
 
 1. **Mobile-First Design** - Optimized for small screens first, then enhanced for larger displays
@@ -19,7 +47,29 @@ This project is a responsive, mobile-friendly redesign of the Massachusetts Secr
 
 ## Accessibility
 
-This mockup significantly improves accessibility compared to the [official site](https://www.sec.state.ma.us/voterregistrationsearch/), which has [numerous accessibility violations](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fwww.sec.state.ma.us%2FVoterRegistrationSearch%2FMyVoterRegStatus.aspx&flag=us). Our improvements include:
+This mockup significantly improves accessibility compared to the [official site](https://www.sec.state.ma.us/voterregistrationsearch/), which has [numerous accessibility violations](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fwww.sec.state.ma.us%2FVoterRegistrationSearch%2FMyVoterRegStatus.aspx&flag=us).
+
+### Accessibility Comparison: Original vs. Mockup
+
+| Feature | Original MA Site | Our Mockup | Impact |
+|---------|-----------------|------------|---------|
+| **Semantic HTML** | Missing landmarks | Full `<header>`, `<nav>`, `<main>`, `<footer>` with ARIA roles | Screen readers can navigate by landmarks |
+| **ARIA Labels** | Missing or incorrect | Comprehensive labels on all interactive elements | Screen readers announce element purpose |
+| **Keyboard Navigation** | Limited support | Full support + Escape key to close menu | Keyboard-only users can navigate entire site |
+| **Focus Indicators** | Weak/invisible | 3px blue outline, 2px offset on all focusable elements | Keyboard users can see where they are |
+| **External Links** | No indication | `rel="noopener noreferrer"` + "(opens in new window)" for screen readers | Security + context for assistive tech users |
+| **Decorative Images** | No `aria-hidden` | All emojis/icons have `aria-hidden="true"` | Screen readers skip decorative content |
+| **Form Labels** | Some missing | All inputs have proper `<label>` elements | Screen readers associate labels with inputs |
+| **Fieldsets** | Not used | Grouped inputs with `<fieldset>` and `<legend>` | Logical form structure for assistive tech |
+| **Status Updates** | No ARIA live regions | `role="status"` + `aria-live="polite"` on result banners | Screen readers announce registration status |
+| **Button States** | No state indicators | `aria-pressed` on language buttons, `aria-expanded` on menu | Screen readers announce button states |
+| **Touch Targets** | Too small (<40px) | Minimum 44px per WCAG guidelines | Easier for users with motor disabilities |
+| **Color Contrast** | Some failures | WCAG AA compliant throughout | Readable for low vision users |
+| **Reduced Motion** | Not supported | `prefers-reduced-motion` media query | Safe for users with vestibular disorders |
+| **Mobile Optimization** | Poor responsiveness | Mobile-first responsive design | Accessible on all device sizes |
+| **Link Security** | Some `target="_blank"` without `rel` | All external links have `rel="noopener noreferrer"` | Prevents security vulnerabilities |
+
+**Summary**: Our mockup transforms an accessibility-challenged government website into a WCAG 2.1 AA compliant, fully accessible experience that works for users of all abilities across all devices.
 
 ### WCAG 2.1 AA Compliance Features
 
