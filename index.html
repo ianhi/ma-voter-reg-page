@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Voter Registration Status: Search - Mobile Friendly</title>
+    <meta name="description" content="Mobile-friendly mockup of the Massachusetts voter registration status search page. Check your voter registration, polling location, and elected officials.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- MOCKUP BANNER -->
-    <div class="mockup-banner">
+    <div class="mockup-banner" role="alert" aria-label="Mockup notice">
         <div class="mockup-banner-content">
-            <strong>⚠️ UNOFFICIAL MOCKUP</strong> • <a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">💻 View source on GitHub</a>
-            <p>This is a mobile-friendly redesign demonstration. For official voter registration information, visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
+            <strong><span aria-hidden="true">⚠️</span> UNOFFICIAL MOCKUP</strong> • <a href="https://github.com/ianhi/ma-voter-reg-page" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">💻</span> View source on GitHub<span class="sr-only"> (opens in new window)</span></a>
+            <p>This is a mobile-friendly redesign demonstration. For official voter registration information, visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank" rel="noopener noreferrer">sec.state.ma.us/voterregistrationsearch<span class="sr-only"> (opens in new window)</span></a></p>
         </div>
     </div>
 
     <!-- Simplified mobile-friendly header -->
-    <header class="site-header">
+    <header class="site-header" role="banner">
         <div class="header-top">
             <div class="header-logo">
-                <div class="seal"></div>
+                <div class="seal" role="img" aria-label="Massachusetts State Seal"></div>
                 <div class="header-text">
                     <div class="header-title">Secretary of the Commonwealth of Massachusetts</div>
                     <div class="header-name">William Francis Galvin</div>
                 </div>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" role="navigation" id="main-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="http://www.sec.state.ma.us">Home</a></li>
                 <li><a href="#">Popular Features</a></li>
@@ -53,18 +57,18 @@
     </div>
 
     <!-- Main content -->
-    <main class="main-content">
+    <main class="main-content" role="main" id="main-content">
         <!-- Language selector -->
-        <div class="language-selector">
-            <button class="lang-btn active">English</button>
-            <span>|</span>
-            <button class="lang-btn">Español</button>
-            <span>|</span>
-            <button class="lang-btn">中文</button>
-            <span>|</span>
-            <button class="lang-btn">ខ្មែរខ្មែ</button>
-            <span>|</span>
-            <button class="lang-btn">Tiếng Việt</button>
+        <div class="language-selector" role="group" aria-label="Language selection">
+            <button class="lang-btn active" aria-pressed="true" lang="en">English</button>
+            <span aria-hidden="true">|</span>
+            <button class="lang-btn" aria-pressed="false" lang="es">Español</button>
+            <span aria-hidden="true">|</span>
+            <button class="lang-btn" aria-pressed="false" lang="zh">中文</button>
+            <span aria-hidden="true">|</span>
+            <button class="lang-btn" aria-pressed="false" lang="km">ខ្មែរខ្មែ</button>
+            <span aria-hidden="true">|</span>
+            <button class="lang-btn" aria-pressed="false" lang="vi">Tiếng Việt</button>
         </div>
 
         <!-- Voter registration form -->
@@ -137,26 +141,26 @@
             </form>
 
             <!-- Demo Results Links (Mockup Only) -->
-            <div class="demo-links-section">
-                <h3>📋 Mockup Demo Links</h3>
+            <div class="demo-links-section" role="navigation" aria-labelledby="demo-links-heading">
+                <h3 id="demo-links-heading"><span aria-hidden="true">📋</span> Mockup Demo Links</h3>
                 <p>Since this is a demonstration mockup (not connected to the real database), use these links to see different result states:</p>
                 <div class="demo-links">
-                    <a href="results-active.html" class="demo-link demo-link-success">
-                        <span class="demo-link-icon">✓</span>
+                    <a href="results-active.html" class="demo-link demo-link-success" aria-label="View active voter registration demo result">
+                        <span class="demo-link-icon" aria-hidden="true">✓</span>
                         <span class="demo-link-text">
                             <strong>Active Registration</strong>
                             <small>See what an active voter sees</small>
                         </span>
                     </a>
-                    <a href="results-inactive.html" class="demo-link demo-link-warning">
-                        <span class="demo-link-icon">⚠️</span>
+                    <a href="results-inactive.html" class="demo-link demo-link-warning" aria-label="View inactive voter registration demo result">
+                        <span class="demo-link-icon" aria-hidden="true">⚠️</span>
                         <span class="demo-link-text">
                             <strong>Inactive Registration</strong>
                             <small>See what an inactive voter sees</small>
                         </span>
                     </a>
-                    <a href="results-not-found.html" class="demo-link demo-link-error">
-                        <span class="demo-link-icon">✕</span>
+                    <a href="results-not-found.html" class="demo-link demo-link-error" aria-label="View not registered demo result">
+                        <span class="demo-link-icon" aria-hidden="true">✕</span>
                         <span class="demo-link-text">
                             <strong>Not Registered</strong>
                             <small>See what an unregistered person sees</small>
@@ -168,15 +172,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>William Francis Galvin</h3>
                 <p>Secretary of the Commonwealth of Massachusetts</p>
                 <address>
-                    <a href="https://www.google.com/maps/place/Secretary+of+State/@42.3590302,-71.0618052,18.08z/data=!3m1!5s0x89e3709b31b58b45:0xb9ca4a5ec000fbec!4m5!3m4!1s0x89e37087e947b017:0x400700461f383298!8m2!3d42.3595949!4d-71.0621929" target="_blank">
+                    <a href="https://www.google.com/maps/place/Secretary+of+State/@42.3590302,-71.0618052,18.08z/data=!3m1!5s0x89e3709b31b58b45:0xb9ca4a5ec000fbec!4m5!3m4!1s0x89e37087e947b017:0x400700461f383298!8m2!3d42.3595949!4d-71.0621929" target="_blank" rel="noopener noreferrer">
                         One Ashburton Place<br>
-                        Boston, MA 02108
+                        Boston, MA 02108<span class="sr-only"> (opens in new window)</span>
                     </a>
                 </address>
                 <p>
@@ -188,25 +192,25 @@
             <div class="footer-section">
                 <h3>Connect with Us</h3>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/secretaryofmass/" target="_blank" aria-label="Instagram">
-                        <span class="social-icon">📷</span> Instagram
+                    <a href="https://www.instagram.com/secretaryofmass/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new window)">
+                        <span class="social-icon" aria-hidden="true">📷</span> Instagram
                     </a>
-                    <a href="https://www.youtube.com/mrvoterreg" target="_blank" aria-label="YouTube">
-                        <span class="social-icon">▶️</span> YouTube
+                    <a href="https://www.youtube.com/mrvoterreg" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in new window)">
+                        <span class="social-icon" aria-hidden="true">▶️</span> YouTube
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Footer links">
             <a href="https://www.sec.state.ma.us/divisions/terms.htm">Terms and Conditions</a>
             <a href="https://www.sec.state.ma.us/divisions/accessibility-statement.htm">Accessibility Statement</a>
-        </div>
+        </nav>
 
         <!-- Mockup disclaimer in footer -->
         <div class="mockup-footer-notice">
-            <p><strong>This is an unofficial mobile-friendly mockup</strong> created for demonstration purposes. For official voter registration information, please visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank">sec.state.ma.us/voterregistrationsearch</a></p>
-            <p><a href="https://github.com/ianhi/ma-voter-check-page" target="_blank">View source code and contribute on GitHub</a></p>
+            <p><strong>This is an unofficial mobile-friendly mockup</strong> created for demonstration purposes. For official voter registration information, please visit <a href="https://www.sec.state.ma.us/voterregistrationsearch/" target="_blank" rel="noopener noreferrer">sec.state.ma.us/voterregistrationsearch<span class="sr-only"> (opens in new window)</span></a></p>
+            <p><a href="https://github.com/ianhi/ma-voter-reg-page" target="_blank" rel="noopener noreferrer">View source code and contribute on GitHub<span class="sr-only"> (opens in new window)</span></a></p>
         </div>
     </footer>
 

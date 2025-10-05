@@ -4,15 +4,31 @@ const mainNav = document.querySelector('.main-nav');
 
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
+        const isExpanded = mainNav.classList.contains('active');
         mainNav.classList.toggle('active');
+
+        // Update ARIA attributes for accessibility
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
 
         // Animate hamburger icon
         const spans = menuToggle.querySelectorAll('span');
-        if (mainNav.classList.contains('active')) {
+        if (!isExpanded) {
             spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
         } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+
+    // Handle keyboard navigation for menu
+    menuToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+            mainNav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            const spans = menuToggle.querySelectorAll('span');
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
             spans[2].style.transform = 'none';
@@ -24,8 +40,13 @@ if (menuToggle) {
 const langButtons = document.querySelectorAll('.lang-btn');
 langButtons.forEach(button => {
     button.addEventListener('click', () => {
-        langButtons.forEach(btn => btn.classList.remove('active'));
+        // Update ARIA states for all language buttons
+        langButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+        });
         button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
         // In a real implementation, this would trigger language change
         console.log('Language changed to:', button.textContent);
     });
@@ -109,6 +130,7 @@ document.addEventListener('click', (e) => {
     if (mainNav && mainNav.classList.contains('active')) {
         if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
             mainNav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
             const spans = menuToggle.querySelectorAll('span');
             spans[0].style.transform = 'none';
             spans[1].style.opacity = '1';
@@ -117,16 +139,15 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Add focus styles for accessibility
-const focusableElements = document.querySelectorAll('a, button, input, select, textarea');
-focusableElements.forEach(element => {
-    element.addEventListener('focus', function() {
-        this.style.outline = '2px solid #5b8ac4';
-        this.style.outlineOffset = '2px';
-    });
-
-    element.addEventListener('blur', function() {
-        this.style.outline = '';
-        this.style.outlineOffset = '';
-    });
+// Keyboard accessibility: Close menu on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mainNav && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+        menuToggle.focus(); // Return focus to menu button
+    }
 });

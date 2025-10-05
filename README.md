@@ -15,7 +15,74 @@ This project is a responsive, mobile-friendly redesign of the Massachusetts Secr
 5. **Collapsible Navigation** - Hamburger menu on mobile to save screen space
 6. **Better Typography** - Readable font sizes that scale appropriately across devices
 7. **Improved Information Hierarchy** - Clear visual organization of voter registration details
-8. **Accessibility Features** - Proper ARIA labels, keyboard navigation, high contrast support
+8. **WCAG 2.1 AA Compliant Accessibility** - Comprehensive accessibility features exceeding the original site
+
+## Accessibility
+
+This mockup significantly improves accessibility compared to the [official site](https://www.sec.state.ma.us/voterregistrationsearch/), which has [numerous accessibility violations](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fwww.sec.state.ma.us%2FVoterRegistrationSearch%2FMyVoterRegStatus.aspx&flag=us). Our improvements include:
+
+### WCAG 2.1 AA Compliance Features
+
+**Screen Reader Support:**
+- Skip link for keyboard navigation to main content
+- Proper semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<footer>`)
+- ARIA landmarks (`role="banner"`, `role="navigation"`, `role="main"`, `role="contentinfo"`)
+- ARIA labels for all interactive elements
+- Screen reader-only text (`.sr-only` class) for context on links opening in new windows
+- Decorative emojis hidden from screen readers with `aria-hidden="true"`
+- Status banners with `role="status"` and `aria-live="polite"` for dynamic updates
+
+**Keyboard Navigation:**
+- Skip to main content link (visible on keyboard focus)
+- Full keyboard navigation support for all interactive elements
+- Enhanced focus indicators with 3px blue outline and 2px offset
+- Escape key closes mobile menu and returns focus
+- Proper tab order throughout the page
+
+**Visual Accessibility:**
+- High color contrast ratios meeting WCAG AA standards
+- Reduced motion support via `prefers-reduced-motion` media query
+- Larger touch targets (minimum 44px) for easier interaction
+- Clear visual focus indicators for all interactive elements
+- Color is never the only means of conveying information
+
+**Form Accessibility:**
+- Proper `<label>` elements for all form inputs
+- Fieldsets with legends for grouped form controls
+- Clear error messaging and validation feedback
+- Native HTML5 input types for better mobile experience
+
+**Link Safety:**
+- `rel="noopener noreferrer"` on all external links for security
+- Clear indication of links opening in new windows
+- Descriptive link text and ARIA labels
+
+### Testing Accessibility
+
+You can test this mockup's accessibility using free tools:
+
+**Automated Testing:**
+- [WAVE Browser Extension](https://wave.webaim.org/extension/) - Real-time accessibility feedback
+- [axe DevTools](https://www.deque.com/axe/devtools/) - Chrome/Firefox extension for accessibility testing
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Built into Chrome DevTools (Accessibility audit)
+- [Accessibility Checker](https://www.accessibilitychecker.org/) - Online accessibility validator
+- [Pa11y](https://pa11y.org/) - Command-line accessibility testing tool
+
+**Manual Testing:**
+- Test with keyboard only (Tab, Shift+Tab, Enter, Escape)
+- Test with screen readers:
+  - [NVDA](https://www.nvaccess.org/) (Windows, free)
+  - [JAWS](https://www.freedomscientific.com/products/software/jaws/) (Windows, paid)
+  - VoiceOver (macOS/iOS, built-in, Cmd+F5 to activate)
+  - TalkBack (Android, built-in)
+- Test in high contrast mode (Windows High Contrast or browser extensions)
+- Test with browser zoom at 200%
+
+**Quick Keyboard Test:**
+1. Press Tab to navigate - skip link should appear
+2. Press Enter on skip link - should jump to main content
+3. Tab through all interactive elements - clear focus indicators
+4. Press Escape when menu is open - menu should close
 
 ## Files
 
